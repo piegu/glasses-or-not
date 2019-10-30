@@ -64,12 +64,17 @@ async def analyze(request):
     return JSONResponse({'result': str(prediction)})
 
 
-if __name__ == '__main__':
-    if 'serve' in sys.argv:
-        uvicorn.run(app=app, host='0.0.0.0', port=5042, log_level="info")
-
-        
 # if __name__ == '__main__':
 #     if 'serve' in sys.argv:
+#         uvicorn.run(app=app, host='0.0.0.0', port=5042, log_level="info")
+
+        
+if __name__ == '__main__':
+    if 'serve' in sys.argv:
 #         port = int(os.getenv('PORT', 5042))
-#         uvicorn.run(app=app, host='0.0.0.0', port=port)
+        port = process.env.port || 5000
+        uvicorn.run(app=app, host='0.0.0.0', port=port)
+
+
+
+app.listen(port);
