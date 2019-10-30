@@ -71,8 +71,8 @@ async def analyze(request):
         
 if __name__ == '__main__':
     if 'serve' in sys.argv:
-#         port = int(os.getenv('PORT', 5042))
-        port = process.env.port
+        port = int(os.getenv('PORT', 5042))
+#         port = process.env.port
         uvicorn.run(app=app, host='0.0.0.0', port=port)
 
 
