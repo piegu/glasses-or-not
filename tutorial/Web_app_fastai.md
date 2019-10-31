@@ -60,14 +60,14 @@ Os passos a seguir consideram que você já tem uma conta no gcloud.
 
     `curl https://cli-assets.heroku.com/install.sh | sh`
 
-    ![](Captura_de_Tela_2019-04-10_as_13-a8eda3de-1e0f-4b82-8a0f-ae3465294c22.41.42.png)
+    ![](0d2b036e-4920-42c7-83a9-7dc99d8b8966.jpg)
 
 5. Faça o clone da aplicação modificada e entre no diretório.
     Note que o seu endereço vai ser diferente do meu.
 
     `git clone https://github.com/piegu/glasses-or-not.git`
 
-    ![git clone](Untitled-7d38f5b9-7231-4dcc-80c0-c27d89432ddd.png)
+    ![](60804939-9189-476e-a74f-9c2335411b7e.jpg)
 
 6. Faça o login no heroku:
 
