@@ -96,45 +96,26 @@ Os passos a seguir consideram que você já tem uma conta no gcloud.
 
     ![](5cccb037-80b0-4b33-8015-1b151460848f.jpg)
 
-10. Agora para construir e enviar o container para o heroku:
-Isso deve levar em torno de 5 minutos. O print abaixo mostra só o começo do texto de saída gerado pelo comando.
+10. Agora para construir e enviar o container para o heroku. Isso deve levar em torno de 5 minutos. O print abaixo mostra só o começo do texto de saída gerado pelo comando.
 
-    `heroku container:push web`
+    `heroku container:push web -a <app-name>`
 
-    ![heroku container:push web](Untitled-c913a59c-f14b-4ab4-848a-233c0f038be4.png)
+    ![](ead96a7f-8ca6-4a96-ae52-d0335ffb1ab0.jpg)
 
     Se a construção e envio forem bem sucedidos, deve gerar uma saída parecida com esta:
 
-    ![heroku container:push web](Untitled-746949f5-f41b-432c-84e3-0f8e3f0435b3.png)
+    ![](4adc42d4-7955-4dc4-863c-f77900147b72.jpg)
 
-10. Agora é necessário informar o keroku que faça o deploy propriamente dito do container criado:
+11. Agora é necessário informar o keroku que faça o deploy propriamente dito do container criado:
 
-    `heroku container:release web`
+    `heroku container:release web -a <app-name>`
 
-    ![heroku container:release web](Untitled-022ee8e9-51b9-491b-a2fe-641c363ee8c5.png)
+    ![](bac4993a-6071-4527-9278-71e6ee9188b8.jpg)
 
-11. O aplicativo já estará disponível https://<nome_da_aplicação>.herokuapp.com. No nosso exemplo em https://testedoherokufastai.herokuapp.com.
+12. Acesse seu aplicativo.
 
-## Deploy no Google Cloud Run
+    `heroku open'
+    
+    Se isso não abrir a janela do navegador, imprimirá o URL que você pode abrir em qualquer navegador.
 
-O Google Cloud tem também agora uma forma simplificada de fazer deploys. Um pouco mais complicado que o Render, mais simples que o Heroku.
-
-Partindo do pressuposto de que você já está com acesso ao Google Cloud, procure pelo serviço [Build](https://console.cloud.google.com/cloud-build/builds) e:
-
-![Criação do acionador no Google Cloud Build](01acionador.gif)]
-
-1. Crie um novo acionador em [https://console.cloud.google.com/cloud-build/triggers](https://console.cloud.google.com/cloud-build/triggers)
-2. Utilize o seu repositório no Github como fonte para esse acionador, alterando apenas o nome da imagem criada. O padrão do cloud build é construir a imagem usando o hash do commit, mas é mais simples utilizar a *tag* latest.
-3. Agora, sempre que o seu código no github for alterado, o cloud build constrói uma nova versão do seu container.
-
-Uma vez que o container tenha sido criado, ele fica disponível para receber o deploy no [Cloud Run](https://console.cloud.google.com/run):
-
-![Execução do deploy no Cloud Run](02deploy.gif)
-
-1. Crie um novo serviço utilizando a imagem de container criada no passo anterior.
-2. Certifique-se de marcar a opção de permitir chamadas não autenticadas, ou a sua aplicação irá ficar acessível apenas a outros serviços dentro da nuvem do google.
-3. Aumente o limite de memória para 2gb, para que seu modelo seja corretamente carregado pelo fastai e consiga realizar as inferências.
-
-O deploy de alterações não é automático, mas é tão simples quanto entrar nos detalhes do servidor no Cloud Run e usar o botão Deploy New Revision.
-
-![Deploy de nova versão](03versao.gif)
+    O aplicativo já estará disponível em https://<nome_da_aplicação>.herokuapp.com. No nosso exemplo em https://glasses-or-not.herokuapp.com/
