@@ -1,6 +1,6 @@
-# Deploy do seu classificador fastai no Heroku como um Web App
+# Deploy do seu modelo fastai no Heroku (Web App)
 
-Existem várias formas de colocar na Internet o seu classificador baseado em fastai. A página de informações do curso mostra diversas opções:
+Existem várias formas de colocar na Internet o seu modelo baseado em fastai. A página de informações do curso mostra diversas opções:
 
 * [Render](https://course.fast.ai/deployment_render.html)
 * [Google App Engine](https://course.fast.ai/deployment_google_app_engine.html)
@@ -9,12 +9,12 @@ Existem várias formas de colocar na Internet o seu classificador baseado em fas
 * [AWS BeanStalk](https://course.fast.ai/deployment_aws_beanstalk.html)
 * [Microsoft Azure Functions](https://course.fast.ai/deployment_azure_functions.html)
 
-Com certeza, uma opção que se destaca é o Render.com ([tutorial online]((https://course.fast.ai/deployment_render.html))), 
+Com certeza, uma opção que se destaca é o Render.com ([tutorial online](https://course.fast.ai/deployment_render.html)), 
 que é uma plataforma criada pelo mesmo criador do [Crestle](https://crestle.ai/) mas uma outra opçao é usar gratuitamente o Heroku.
 
 ## 1) Exporte o modelo treinado
 
-Gere o seu modelo normalmente e salve o `export.pkl` `com learn.export()`.
+Gere o seu modelo normalmente e salve o `export.pkl` com `learn.export()`.
 
 Coloque que arquivo no google drive ou dropbox (porque é de graça). É necessário gerar um link para o arquivo usando um dos dois serviços abaixo:
 
@@ -25,12 +25,12 @@ Coloque que arquivo no google drive ou dropbox (porque é de graça). É necess�
 
 Faça um fork no github deste repositório base, que contém uma aplicação pré-pronta e customizável.
 
-Edite, no próprio Github, o arquivo `[app/server.py](https://github.com/piegu/glasses-or-not/blob/master/app/server.py)` para incluir:
+Edite, no próprio Github, o arquivo [app/server.py](https://github.com/piegu/glasses-or-not/blob/master/app/server.py) para incluir:
 
 1. O endereço do `export.pkl` em `export_file_url`.
-2. Troque o nome das classes geradas pelo seu modelo em `classes = ['with_glasses', 'without_glasses']
+2. Troque o nome das classes geradas pelo seu modelo em `classes = ['with_glasses', 'without_glasses']`.
 3. Lembre-se de usar a opção "Commit directly to the master branch".
-4. Edite também o texto que aparece para os usuários da sua aplicação, no arquivo `[app/views/index.html](https://github.com/piegu/glasses-or-not/blob/master/app/view/index.html):`
+4. Edite também o texto que aparece para os usuários da sua aplicação, no arquivo [app/views/index.html](https://github.com/piegu/glasses-or-not/blob/master/app/view/index.html):
     1. O título (tag `<title>`)
     2. O cabeçalho (`div class='title'`) e a explicação (tag `<p>`)
 5. E pronto!
@@ -65,7 +65,7 @@ Os passos a seguir consideram que você já tem uma conta no gcloud.
 5. Faça o clone da aplicação modificada e entre no diretório.
     Note que o seu endereço vai ser diferente do meu.
 
-    `git clone https://github.com/weltonrodrigo/fastai-v3.git`
+    `git clone https://github.com/piegu/glasses-or-not.git`
 
     ![git clone](Untitled-7d38f5b9-7231-4dcc-80c0-c27d89432ddd.png)
 
