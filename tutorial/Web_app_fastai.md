@@ -1,5 +1,7 @@
 # Deploy do seu modelo fastai no Heroku (Web App)
 
+**Nota**: [texto de introdução](https://github.com/weltonrodrigo/fastai-v3) e [tutorial](https://github.com/piegu/glasses-or-not/blob/master/tutorial/Web_app_fastai.md) (muito, muito) inspirado do trabalho do [Welton Rodrigo Torres Nascimento](https://github.com/weltonrodrigo). Obrigado a ele!
+
 Existem várias formas de colocar na Internet o seu modelo baseado em fastai. A página de informações do curso mostra diversas opções:
 
 * [Render](https://course.fast.ai/deployment_render.html)
@@ -116,6 +118,4 @@ Os passos a seguir consideram que você já tem uma conta no gcloud.
 
     `heroku open'
     
-    Se isso não abrir a janela do navegador, imprimirá o URL que você pode abrir em qualquer navegador.
-
-    O aplicativo já estará disponível em https://<nome_da_aplicação>.herokuapp.com. No nosso exemplo em https://glasses-or-not.herokuapp.com/
+    Se isso não abrir a janela do navegador, seu aplicativo já estará disponível em https://<nome_da_aplicação>.herokuapp.com. No nosso exemplo em https://glasses-or-not.herokuapp.com/
