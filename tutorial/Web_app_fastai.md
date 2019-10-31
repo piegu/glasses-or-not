@@ -62,36 +62,41 @@ Os passos a seguir consideram que você já tem uma conta no gcloud.
 
     ![](0d2b036e-4920-42c7-83a9-7dc99d8b8966.jpg)
 
-5. Faça o clone da aplicação modificada e entre no diretório.
-    Note que o seu endereço vai ser diferente do meu.
+5. Faça o clone da aplicação modificada e entre no diretório. Note que o seu endereço vai ser diferente do meu.
 
     `git clone https://github.com/piegu/glasses-or-not.git`
 
     ![](60804939-9189-476e-a74f-9c2335411b7e.jpg)
+    
+6. Entre na pasta do seu modelo. Note que o nome da sua pasta vai ser diferente do meu.
 
-6. Faça o login no heroku:
+    `cd glasses-or-not`
+
+    ![](7d12a72b-13cc-406c-a5b5-5378166e3730.jpg)
+
+7. Faça o login no heroku:
 
     `heroku login`
     
     O cliente heroku vai pedir que você aperte enter e depois apresentar um link para ser aberto na internet. Esse link vai te levar para a página de login. Nessa tela você pode fazer seu cadastro se ainda não tiver. Depois da autenticação bem sucedida, o cliente vai informar que está logado.
 
-    ![heroku login](Untitled-03640a1d-0ff2-4a86-a18b-5f144d9b7b64.png)
+    ![](48b7d437-7d51-4a8f-b69f-8f30bd14f842.jpg)
 
-7. Crie um novo app no Heroku para receber sua aplicação:
+8. Crie um novo app no Heroku para receber sua aplicação:
 
-    `heroku create nome-da-aplicacao`
+    `heroku create -a <app-name>`
 
-    O nome da aplicação também vai ser o endereço dela na internet. No exemplo acima, seria nome-da-aplicacao.app.herokuapp.com. Caso você não queira um nome específico, ele vai criar um nome aleatório.
+    O nome da aplicação também vai ser o endereço dela na Internet. No exemplo acima, seria nome-da-aplicacao.app.herokuapp.com. Caso você não queira um nome específico, ele vai criar um nome aleatório.
 
-    ![heroku create nome-da-aplicacao](Untitled-36588520-6e31-4263-928d-7e0fb45a7119.png)
+    ![](493dd0b5-1c3e-4434-9971-3669313ffe02.jpg)
 
-8. É necessário informar ao cliente docker como fazer o login no heroku, mas o próprio cliente toma conta disso:
+9. É necessário informar ao cliente docker como fazer o login no heroku, mas o próprio cliente toma conta disso:
 
     `heroku container:login`
 
-    ![heroku container:login](Untitled-7b6266a4-8d15-4417-83ea-3b60ee693a9f.png)
+    ![](5cccb037-80b0-4b33-8015-1b151460848f.jpg)
 
-9. Agora para construir e enviar o container para o heroku:
+10. Agora para construir e enviar o container para o heroku:
 Isso deve levar em torno de 5 minutos. O print abaixo mostra só o começo do texto de saída gerado pelo comando.
 
     `heroku container:push web`
