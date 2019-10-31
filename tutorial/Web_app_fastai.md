@@ -125,6 +125,6 @@ Os passos a seguir consideram que você já tem uma conta no gcloud.
 
 12. Acesse seu aplicativo.
 
-    `heroku open'
+    `heroku open`
     
     Se isso não abrir a janela do navegador, seu aplicativo já estará disponível em https://<nome_da_aplicação>.herokuapp.com. No nosso exemplo em https://glasses-or-not.herokuapp.com/
