@@ -1,11 +1,15 @@
 # Deploy do seu modelo fastai no Heroku (Web App)
 
-`**Nota**: [texto de introdução](https://github.com/piegu/glasses-or-not/edit/master/README.md) e [tutorial](https://github.com/piegu/glasses-or-not/blob/master/tutorial/Web_app_fastai.md) 
+## Agradecimento
+
+[Texto de introdução](https://github.com/piegu/glasses-or-not/edit/master/README.md) e [tutorial](https://github.com/piegu/glasses-or-not/blob/master/tutorial/Web_app_fastai.md) 
 - (muito, muito, muito) inspirado do [trabalho](https://github.com/weltonrodrigo/fastai-v3) do [Welton Rodrigo Torres Nascimento](https://github.com/weltonrodrigo)
 - (muito, muito) inspirado do [trabalho](https://github.com/render-examples/fastai-v3) do [Anurag Goel](https://github.com/anurag)
 - (muito) inspirado do [trabalho](https://github.com/nikhilno1/healthy-or-not/blob/master/heroku-deploy.md) do [Nikhil](https://github.com/nikhilno1)
 
-Muito obrigado a eles!`
+Muito obrigado a eles!
+
+## colocar na Internet o seu modelo baseado em fastai 
 
 Existem várias formas de colocar na Internet o seu modelo baseado em fastai. A página de informações do curso mostra diversas opções:
 
